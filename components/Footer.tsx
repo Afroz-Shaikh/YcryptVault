@@ -22,8 +22,8 @@ const Footer5 = (props: Props) => {
           <div className="xl:flex xl:items-center xl:justify-start">
             {/* <Image
               className="w-auto mx-auto h-7"
-              src="https://www.auraui.com/logo-dark.png"
-              alt="Aura UI Logo"
+              src=""
+              alt="Logo"
               height={200}
               width={200}
             /> */}

@@ -24,8 +24,8 @@ const Feature15 = () => {
               Secured 
             </h3>
             <p className="mt-4 text-sm text-gray-600">
-              AuraUI ensures all transactions are secure and encrypted for your
-              safety.
+              Everything is encrpyted and stored on your device.
+              
             </p>
           </div>
           <div className={itemStyles}>
@@ -37,7 +37,7 @@ const Feature15 = () => {
               Completely Offline 
             </h3>
             <p className="mt-4 text-sm text-gray-600">
-              Experience lightning-fast load times with AuraUI components.
+              Works completely offline, no need to connect to the internet.
             </p>
           </div>
           <div className={itemStyles}>
@@ -48,7 +48,7 @@ const Feature15 = () => {
               Light & Dark Mode
             </h3>
             <p className="mt-4 text-sm text-gray-600">
-              Switch effortlessly between light and dark modes with AuraUI.
+              Switch effortlessly between light and dark modes.
             </p>
           </div>
 
@@ -60,7 +60,7 @@ const Feature15 = () => {
               Easy Grouping
             </h3>
             <p className="mt-4 text-sm text-gray-600">
-              Easily filter through blocks to find what you need with AuraUI.
+              Easily filter through your credentials with tags.
             </p>
           </div>
         </div>
