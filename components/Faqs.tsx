@@ -21,7 +21,7 @@ const Faqs = () => {
 2. Once inside the app, click on Menu icon on top left corner and click on Backup/Restore.
 3. Click on BACKUP button.
 
-The backup will be created in phone's internal storage under onekey_backup folder. Please remember that a backup is always protected by a password which is same as your master password at the time of backup. The Auto backup feature available for premium users creates automatic backups based on a certain chosen internal. This ensures that you will always have a backup in case of any event of data loss.
+The backup will be created in phone internal storage under onekey_backup folder. Please remember that a backup is always protected by a password which is same as your master password at the time of backup. The Auto backup feature available for premium users creates automatic backups based on a certain chosen internal. This ensures that you will always have a backup in case of any event of data loss.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
