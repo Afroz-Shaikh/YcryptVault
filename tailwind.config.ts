@@ -78,12 +78,18 @@ const config: Config = {
   				}
   			}
   		},
+		  fontFamily: {
+			'sf-pro': ['SF Pro', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', 'sans-serif'],
+		  },
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+	require("tailwindcss-animate"),
+	
+  ],
 };
 export default config;

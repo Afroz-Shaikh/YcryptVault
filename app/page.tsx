@@ -8,19 +8,22 @@ import Banner from "../components/ui/Banner";
 import Features from "../components/Features";
 import { WobbleCardDemo } from "@/components/Bento";
 
-  
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-black">
-      <NavBar />
       <main className="flex-grow">
-     
-        <Hero />
-       
-        <Features/>
-        <WobbleCardDemo/>
-        <Faqs/>
-        
+        <section id="hero">
+          <Hero />
+        </section>
+        <section id="features">
+          <Features />
+        </section>
+        <section id="wobbleCardDemo">
+          <WobbleCardDemo />
+        </section>
+        <section id="faqs">
+          <Faqs />
+        </section>
       </main>
       <Footer />
     </div>

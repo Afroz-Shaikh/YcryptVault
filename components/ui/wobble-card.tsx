@@ -22,6 +22,7 @@ export const WobbleCard = ({
     const y = (clientY - (rect.top + rect.height / 2)) / 20;
     setMousePosition({ x, y });
   };
+
   return (
     <motion.section
       onMouseMove={handleMouseMove}
@@ -32,34 +33,42 @@ export const WobbleCard = ({
       }}
       style={{
         transform: isHovering
-          ? `translate3d(${mousePosition.x}px, ${mousePosition.y}px, 0) scale3d(1, 1, 1)`
+          ? `translate3d(${mousePosition.x}px, ${mousePosition.y}px, 0) scale3d(1.02, 1.02, 1)`
           : "translate3d(0px, 0px, 0) scale3d(1, 1, 1)",
-        transition: "transform 0.1s ease-out",
+        transition: "transform 0.2s ease-out",
       }}
       className={cn(
-        "mx-auto w-full bg-black-800  relative rounded-2xl overflow-hidden",
+        "relative mx-auto w-full bg-gray-900 rounded-2xl overflow-hidden shadow-xl",
         containerClassName
       )}
     >
       <div
-        className="relative  h-full [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))]  sm:mx-0 sm:rounded-2xl overflow-hidden"
+        className="relative h-full p-1 bg-gradient-to-r from-[#BBF517] via-[#36AADB] to-[#7FDAC7] rounded-2xl"
         style={{
-          boxShadow:
-            "0 10px 32px rgba(34, 42, 53, 0.12), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.05), 0 4px 6px rgba(34, 42, 53, 0.08), 0 24px 108px rgba(47, 48, 55, 0.10)",
+          backgroundPosition: `${mousePosition.x * 5}px ${mousePosition.y * 5}px`,
+          transition: "background-position 0.1s ease-out",
         }}
       >
-        <motion.div
+        <div
+          className="relative h-full bg-black rounded-2xl shadow-lg transition-transform duration-300 ease-in-out group overflow-hidden"
           style={{
-            transform: isHovering
-              ? `translate3d(${-mousePosition.x}px, ${-mousePosition.y}px, 0) scale3d(1.03, 1.03, 1)`
-              : "translate3d(0px, 0px, 0) scale3d(1, 1, 1)",
-            transition: "transform 0.1s ease-out",
+            boxShadow:
+              "0 10px 32px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.4)",
           }}
-          className={cn("h-full px-4 py-20 sm:px-10", className)}
         >
-          <Noise />
-          {children}
-        </motion.div>
+          <motion.div
+            style={{
+              transform: isHovering
+                ? `translate3d(${-mousePosition.x}px, ${-mousePosition.y}px, 0) scale3d(1.03, 1.03, 1)`
+                : "translate3d(0px, 0px, 0) scale3d(1, 1, 1)",
+              transition: "transform 0.1s ease-out",
+            }}
+            className={cn("h-full px-4 py-20 sm:px-10", className)}
+          >
+            <Noise />
+            {children}
+          </motion.div>
+        </div>
       </div>
     </motion.section>
   );
@@ -67,12 +76,6 @@ export const WobbleCard = ({
 
 const Noise = () => {
   return (
-    <div
-      className="absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]"
-      style={{
-        backgroundImage: "url(/noise.webp)",
-        backgroundSize: "30%",
-      }}
-    ></div>
+    <div className="absolute inset-0 opacity-5 bg-noise bg-opacity-10 pointer-events-none"></div>
   );
 };
